@@ -6,13 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/ca7100e5dd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Portifolio</title>
 </head>
 
-<body>
+<body class="bg-grid-pattern text-white">
+<!-- Fundo escuro do site com a camada de iluminação -->
+
+  <!-- Camada do brilho -->
+  <div class="spotlight-overlay"></div>
+
+  <!-- Todo o seu conteúdo fica aqui -->
+
+  <script src="script.js"></script>
+
     <header>
         <p id="header-name">
-            duda lima
+            Eduarda lima
         </p>
         <nav>
             <a href="">Sobre</a>
@@ -21,34 +31,54 @@
             <a href="">Projetos</a>
             <a href="">Skills</a>
             <a href="">Contato</a>
+            <p id="barra">|</p>
             <i class="fa-solid fa-sun"></i>
-            <button>
-                <i class="fa-solid fa-download"></i>
-                Currículo
+            <button class="button" id="btn-curriculo-nav">
+                <p>
+                    <i class="fa-solid fa-download"></i>
+                    Currículo
+                </p>
             </button>
         </nav>
     </header>
-    <main>
-        <p class="subtitulo">Disponível para novas oportunidades</p>
+    <main class="relative z-20 p-8">
+        <p class="subtitulo">
+            <span class="bolinha"></span>
+            Disponível para novas oportunidades
+        </p>
         <h1>Duda Lima</h1>
-        <h3>Desenvolvedora Full Stack</h3>
-        <p>Sou Desenvolvedora de Software em formação.</p>
-        <button>
-            <i class="fa-solid fa-arrow-down"></i>
-            Ver Projetos
+        <h3>Desenvolvedora <span class="dest">Full Stack</span></h3>
+        <p class="text">Olá! Sou Maria Eduarda, estudante de Análise e Desenvolvimento
+             de Sistemas, apaixonada por tecnologia e desenvolvimento web. Atualmente, 
+             estou aprimorando meus conhecimentos em desenvolvimento Full Stack, explorando novas ferramentas e criando projetos que me permitem colocar em prática o que aprendo. Gosto de desafios, sou curiosa e estou sempre em busca de novos conhecimentos para evoluir
+             como desenvolvedora e transformar ideias em soluções.</p>
+        <div id="buttons-container">
+
+            <button class="button" id="btn-projetos">
+                <p>
+                    <i class="fa-solid fa-arrow-down"></i>
+                     Ver Projetos
+                </p>
+            
         </button>
-        <button>
-            <i class="fa-solid fa-download"></i>
-            Currículo
+        <button class="button" id="btn-curriculo">
+            <p>
+                <i class="fa-solid fa-download"></i>
+                Currículo
+            </p>
+            
         </button>
+
+        </div>
+        
 
         <div class="trajetoria-academica">
 
             <p class="subtitulo">
                 Trajetória Acadêmica
             </p>
-            <h2>Jornada Acadêmica</h2>
-            <p>Do ensino médio a graduação em Desenvolvimento de Software.
+            <h2 class="title">Jornada <span class="dest">Acadêmica</span></h2>
+            <p class="text">Do ensino médio a graduação em Desenvolvimento de Software.
                 um compromisso contínuo com aprendizado e profundidade técnica.
             </p>
 

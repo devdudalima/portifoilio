@@ -1,27 +1,254 @@
+body {
+    margin: 0px;
+    background-color: #0a0211;
+    color: white;
+}
+
+/* Fundo escuro com grade quadriculada */
+.bg-grid-pattern {
+  
+  background-image: 
+    linear-gradient(to right, #2c064213 1px, transparent 1px),
+    linear-gradient(to bottom, #af1be90a 1px, transparent 1px);
+  background-size: 32px 32px; /* Tamanho dos quadrados (aumente ou diminua se preferir) */
+}
+
+/* Camada da luz do spotlight que segue o mouse */
+.spotlight-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+  background: radial-gradient(
+    650px circle at var(--x, 50%) var(--y, 50%),
+    #7816d310, /* Tom de luz azul/ciano suave */
+    transparent 80%
+  );
+}
+
+
+
+
+
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0px;
-    background-color: #140d1c;
     color: white;
 }
 
 header {
     position: fixed;
-    top: 0;
+    top: 20px;
     left: 0;
     right: 0;
     display: flex;
-    justify-content: center;
-    padding: 23px 60px;
+    justify-content: space-between;
+    padding: 12px 30px;
     align-items: center;
     border-radius: 50px;
-    margin: 20px;
-    border: 1px solid #3a373d91;
+    margin: 0 auto;
+    max-width: 1200px;
+    border: 1px solid #9c9c9c23;
     
-    background-color: #3e394291;
+    background-color: rgba(255, 255, 255, 0.116);
+    backdrop-filter: blur(8px);
+    color: white;
+    z-index: 1000
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.637);
+    
+}
+
+#header-name {
+    font-size: 1.2rem;
+    font-weight: bolder;
     color: white;
 }
 
+#barra {
+    color: rgba(255, 255, 255, 0.418);
+    font-weight: 100;
+}
+
+.button {
+    background-color: #af1be913;
+    border: 1px solid #9c11d317;
+    padding: 9px 15px;
+    border-radius: 50px;
+    
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#btn-curriculo-nav {
+    background-color: #af1be92a;
+    border: 1px solid #9c11d32a;
+}
+
+.button p {
+    font-weight: bolder;
+    font-size: 0.9rem;
+    color: #8c11d3;
+}
+
+#btn-curriculo-nav:hover {
+    background-color: #8c11d3;
+
+    p {
+        color: white;
+    }
+}
+
 main {
-    padding-top: 60px;
+    padding-top: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subtitulo {
+    text-align: center;
+    margin: auto;
+    color: #b670df;
+    font-size: 0.88rem;
+    font-weight: 500;
+    background-color: #b670df17;
+    border: 1px solid #b670df17;
+    box-shadow: 0px 0px 10px #b670df27;
+    padding: 7px 15px;
+    border-radius: 30px;
+    width: auto;
+    max-width: 255px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bolinha {
+    width: 7px;
+    height: 7px;
+    margin-right: 8px;
+    background-color: #b670df;
+    border-radius: 50%;
+    display: inline-block;
+
+    animation: piscar 2.2s infinite;
+}
+
+@keyframes piscar {
+    0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 10px #b670df;
+    }
+
+    50% {
+        opacity: 0.3;
+        box-shadow: 0 0 2px #b670df;
+    }
+}
+
+h1 {
+    padding: 25px 0px 0px;
+    font-size: 5.6em;
+}
+
+h3 {
+    font-size: 2em;
+    font-weight: 500;
+    color: #f7f7f770;
+    padding-bottom: 10px;
+}
+
+.dest {
+    font-weight: bolder;
+    background: linear-gradient(90deg, #e97446, #ec48ad, #e97446);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.text {
+    font-size: 1.1rem;
+    color: #f7f7f770;
+    text-align: center;
+    max-width: 1100px;
+    padding: 15px 0px;
+}
+
+#buttons-container {
+    display: flex;
+    gap: 25px;
+    padding: 40px 0px 80px;
+}
+
+#btn-projetos {
+    background-color: #8c11d3;
+    border: 1px solid #8c11d3;
+    padding: 12px 25px;
+    width: 160px;
+    box-shadow: 0px 0px 12px #8c11d379;
+
+    p {
+        color: rgb(245, 245, 245);
+    }
+    
+}
+
+#btn-curriculo {
+    background-color: #af1be90e;
+    border: 1px solid #9c11d31a;
+    padding: 12px 25px;
+    width: 160px;
+
+    p {
+        color: white;
+    }
+}
+
+.trajetoria-academica {
+    padding: 100px 0px 100px;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    text-align: center;
+    padding: 35px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    flex-wrap: wrap;
+    padding: 40px 10px;
+}
+
+.card{
+    background-color: #181020;
+    border: 1px solid #291a38c2;
+    padding: 25px 20px;
+    width: 400px;
+    height: 500px;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.3s ease-in-out;
 }
