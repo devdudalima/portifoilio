@@ -1,33 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 body {
     margin: 0px;
     background-color: #0a0211;
     color: white;
 }
 
-/* Fundo escuro com grade quadriculada */
 .bg-grid-pattern {
-  
-  background-image: 
-    linear-gradient(to right, #2c064213 1px, transparent 1px),
-    linear-gradient(to bottom, #af1be90a 1px, transparent 1px);
-  background-size: 32px 32px; /* Tamanho dos quadrados (aumente ou diminua se preferir) */
+    background-color: #080510;
+
+    background-image:
+        /* Grade quadriculada */
+        linear-gradient(to right, #2c06421a 1px, transparent 1px),
+        linear-gradient(to bottom, #2c06421a 1px, transparent 1px),
+
+        /* Estrelas pequenas */
+        radial-gradient(1px 1px at 20% 30%, #ffffff3b 99%, transparent),
+        radial-gradient(1px 1px at 40% 80%, #ffffff33 99%, transparent),
+        radial-gradient(1px 1px at 90% 60%, #ffffff31 99%, transparent),
+        radial-gradient(1px 1px at 10% 90%, #ffffff2f 99%, transparent),
+        radial-gradient(2px 2px at 55% 50%, #b76aff21 99%, transparent);
+
+    background-size:
+        32px 32px,
+        32px 32px,
+        250px 250px,
+        300px 300px,
+        220px 220px,
+        280px 280px,
+        200px 200px,
+        350px 350px;
 }
 
-/* Camada da luz do spotlight que segue o mouse */
 .spotlight-overlay {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 10;
-  background: radial-gradient(
-    650px circle at var(--x, 50%) var(--y, 50%),
-    #7816d310, /* Tom de luz azul/ciano suave */
-    transparent 80%
-  );
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 10;
+
+    background: radial-gradient(
+        650px circle at var(--x, 50%) var(--y, 50%),
+        #7816d310,
+        transparent 80%
+    );
 }
-
-
-
 
 
 * {
@@ -63,11 +79,39 @@ nav {
     align-items: center;
 }
 
-nav a{
+nav a {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.637);
+    color: rgba(255, 255, 255, 0.459);
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Barra do sublinhado */
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #8c11d3;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover */
+nav a:hover {
+    color: white;
     
 }
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
 
 #header-name {
     font-size: 1.2rem;
@@ -93,24 +137,38 @@ nav a{
 #btn-curriculo-nav {
     background-color: #af1be92a;
     border: 1px solid #9c11d32a;
+
+    
 }
+
+
 
 .button p {
     font-weight: bolder;
     font-size: 0.9rem;
     color: #8c11d3;
+
+    path {
+    color: #8c11d3 ;
+    }
 }
 
 #btn-curriculo-nav:hover {
     background-color: #8c11d3;
+    box-shadow: 0px 0px 12px #8c11d379;
+    transform: translatey(-2px);
 
     p {
         color: white;
     }
+
+    path {
+    color: white ;
+    }
 }
 
 main {
-    padding-top: 220px;
+    padding-top: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -160,7 +218,7 @@ main {
 
 h1 {
     padding: 25px 0px 0px;
-    font-size: 5.6em;
+    font-size: 5.5em;
 }
 
 h3 {
@@ -177,6 +235,34 @@ h3 {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+}
+
+.texto-animado {
+    font-size: 2em;
+    font-weight: 500;
+
+     border-right: 2px solid #ec48ad96;
+     padding-right: 5px;
+     height: 35px;
+
+    animation: cursor 1s infinite;
+}
+
+.dest {
+    font-weight: bolder;
+
+    background: linear-gradient(90deg, #e97446, #ec48ad, #e97446);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+   
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
 }
 
 .text {
@@ -196,29 +282,59 @@ h3 {
 #btn-projetos {
     background-color: #8c11d3;
     border: 1px solid #8c11d3;
-    padding: 12px 25px;
-    width: 160px;
-    box-shadow: 0px 0px 12px #8c11d379;
+    padding: 18px 32px;
+    width: 200px;
+    box-shadow: 0px 0px 12px #4325557a;
 
     p {
         color: rgb(245, 245, 245);
     }
     
+    path {
+    color: white ;
+    }
 }
 
-#btn-curriculo {
-    background-color: #af1be90e;
-    border: 1px solid #9c11d31a;
-    padding: 12px 25px;
-    width: 160px;
+#btn-projetos:hover  {
+    background-color: #af1be9;
+    box-shadow: 0px 0px 12px #8c11d379;
+    transform: translatey(-4px);
 
     p {
         color: white;
     }
 }
 
+#btn-curriculo {
+    background-color: #af1be90e;
+    border: 1px solid #9c11d31a;
+    padding: 12px 25px;
+    width: 200px;
+
+    p {
+        color: white;
+    }
+}
+
+#btn-curriculo:hover {
+    background-color: rgb(226, 226, 226);
+    
+    box-shadow: 0px 0px 12px #8c11d379;
+    transform: translatey(-4px);
+
+    p{
+        color: #8c11d3;
+    }
+
+    path {
+    color: #8c11d3;
+}
+}
+
+
+
 .trajetoria-academica {
-    padding: 100px 0px 100px;
+    padding: 180px 0px 100px;
 }
 
 .title {
@@ -235,6 +351,7 @@ h3 {
     gap: 45px;
     flex-wrap: wrap;
     padding: 40px 10px;
+    
 }
 
 .card{
@@ -242,13 +359,124 @@ h3 {
     border: 1px solid #291a38c2;
     padding: 25px 20px;
     width: 400px;
-    height: 500px;
+    height: 600px;
     border-radius: 15px;
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 70px 40px 60px 25px 25px 230px;
     justify-content: center;
     align-items: center;
 
     transition: all 0.3s ease-in-out;
+    z-index: 2;
+    box-shadow: 0px 0px 18px #9448ec17;
+}
+
+.card:hover {
+    transform: translatey(-5px);
+    box-shadow: 0px 0px 18px #9448ec2d;
+}
+
+#barra-horizontal {
+    width: 50px;
+    height: 3px;
+    background-color: #8c11d3ce;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 1;
+}
+
+.student-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(124, 75, 173, 0.281);
+    border-radius: 15px;
+    border: 1px solid #39244ec2;
+}
+
+.text-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    padding-right: 15px;
+    
+}
+
+.etapa {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.37);
+}
+
+.status.subtitulo {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.8em;
+    margin: 9px -14px;
+}
+
+.data {
+    grid-column: 1 / span 2;
+    color: rgba(255, 255, 255, 0.479);
+    background-color: rgba(255, 255, 255, 0.068);
+    max-width: 250px;
+    text-align: center;
+    padding: 4px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.055);
+    font-size: 0.9em;
+}
+
+.data path {
+    color: rgba(255, 255, 255, 0.479);
+    margin-right: 5px;
+}
+
+.curso {
+    grid-column: 1 / span 2;
+    font-weight: bolder;
+    font-size: 1.1rem;
+}
+
+.instituicao {
+
+    grid-column: 1 / span 2;
+    color: #8c11d3;
+    font-weight: 500;
+    margin-left: 4px;
+}
+
+.local {
+    grid-column: 1 / span 2;
+    color: rgba(255, 255, 255, 0.336);
+    font-size: 0.9rem;
+}
+
+.local path {
+    color: rgba(255, 255, 255, 0.336);
+    margin-right: 5px;
+}
+
+.descricao {
+    grid-column: 1 / span 2;
+    color: rgba(255, 255, 255, 0.479);
+    font-size: 1rem;
+    text-align: justify;
+}
+
+#barra-cursos {
+    grid-column: 1 / span 2;
+    margin: 10px 0px;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.123);
 }

@@ -11,14 +11,8 @@
 </head>
 
 <body class="bg-grid-pattern text-white">
-<!-- Fundo escuro do site com a camada de iluminação -->
 
-  <!-- Camada do brilho -->
   <div class="spotlight-overlay"></div>
-
-  <!-- Todo o seu conteúdo fica aqui -->
-
-  <script src="script.js"></script>
 
     <header>
         <p id="header-name">
@@ -46,8 +40,11 @@
             <span class="bolinha"></span>
             Disponível para novas oportunidades
         </p>
-        <h1>Duda Lima</h1>
-        <h3>Desenvolvedora <span class="dest">Full Stack</span></h3>
+        <h1>Eduarda Lima</h1>
+        <h3 class="texto-animado">
+            Desenvolvedora 
+    <span class="dest"></span>
+</h3>
         <p class="text">Olá! Sou Maria Eduarda, estudante de Análise e Desenvolvimento
              de Sistemas, apaixonada por tecnologia e desenvolvimento web. Atualmente, 
              estou aprimorando meus conhecimentos em desenvolvimento Full Stack, explorando novas ferramentas e criando projetos que me permitem colocar em prática o que aprendo. Gosto de desafios, sou curiosa e estou sempre em busca de novos conhecimentos para evoluir
@@ -56,7 +53,7 @@
 
             <button class="button" id="btn-projetos">
                 <p>
-                    <i class="fa-solid fa-arrow-down"></i>
+                    <span class="fa-solid fa-arrow-down icone"></span>
                      Ver Projetos
                 </p>
             
@@ -88,18 +85,24 @@
                     <div class="student-icon">
                         <i class="fa-solid fa-graduation-cap"></i>
                     </div>
-                    <p>etapa 1</p>
-                    <p class="status">
+
+                    <div class="text-top">
+                        <p class="etapa">ETAPA 1</p>
+                    <p class="status subtitulo">
                         cursando
                     </p>
+                    </div>
+                    
                     <p class="data">
+                        <i class="fa-regular fa-calendar-days"></i>
                         agosto 2026 - dezembro 2028
                     </p>
-                    <h4>Graduação em Análise e Desenvolvimento de Sistemas</h4>
+                    <h4 class="curso">Graduação em Análise e Desenvolvimento de Sistemas</h4>
                     <p class="instituicao">
                         universidade potiguar (unp)
                     </p>
                     <p class="local">
+                        <i class="fa-solid fa-location-dot"></i>
                         natal, rio grande do norte, brasil
                     </p>
                     <p class="descricao">
@@ -109,6 +112,8 @@
                         a importância da análise de requisitos, design de interfaces e testes de software,capacitando
                         os graduandos a atuar em diversas áreas da tecnologia da informação.
                     </p>
+
+                    <div id="barra-cursos"></div>
                     <div class="habilidades">
                         <ul>
                             <li>Engenharia de software, algoritmos, bancos de dados.</li>
@@ -117,15 +122,20 @@
 
                 </div>
 
+                <div id="barra-horizontal"></div>
+
                 <div class="card">
                     <div class="student-icon">
                         <i class="fa-solid fa-graduation-cap"></i>
                     </div>
-                    <p>etapa 2</p>
-                    <p class="status">
+                    <div class="text-top">
+                        <p class="etapa">ETAPA 2</p>
+                    <p class="status subtitulo">
                         cursando
                     </p>
+                    </div>
                     <p class="data">
+                        <i class="fa-regular fa-calendar-days"></i>
                         outubro 2026 - março 2027
                     </p>
                     <h4>curso full stack</h4>
@@ -133,6 +143,7 @@
                         senac
                     </p>
                     <p class="local">
+                        <i class="fa-solid fa-location-dot"></i>
                         natal, rio grande do norte, brasil
                     </p>
                     <p class="descricao">
@@ -142,6 +153,7 @@
                         de dados utilizando bancos de dados. Criação de Projetos e Desenvolvimento
                         de aplicações completas do zero (End-to-End).
                     </p>
+                    <div id="barra-cursos"></div>
                     <div class="habilidades">
                         <ul>
                             <li>Desenvolvimento de Projetos do Zero: Capacidade de planejar, estruturar e entregar
