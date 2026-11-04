@@ -344,7 +344,7 @@ h3 {
 }
 
 .title {
-    font-size: 2.5rem;
+    font-size: 4rem;
     font-weight: bolder;
     text-align: center;
     padding: 35px;
@@ -361,8 +361,8 @@ h3 {
 }
 
 .card{
-    background-color: #181020;
-    border: 1px solid #291a38c2;
+    background-color: #1a1222;
+    border: 1px solid #2a1e36c2;
     padding: 25px 20px;
     width: 400px;
     height: 600px;
@@ -573,4 +573,155 @@ h3 {
     
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+}
+
+.btn-repositorio{
+    text-align: center;
+    margin: auto;
+    margin-top: 150px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background-color: #8b8a8b1a;
+    border: 1px solid #8b8a8b2a;
+    box-shadow: 0px 0px 10px #ffffff10;
+    padding: 15px 27px;
+    border-radius: 30px;
+    width: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    p {
+    margin-left: 5px;
+    color: white;
+    font-size: 1rem;
+    }
+}
+
+.btn-repositorio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 10px #ffffff18;
+}
+
+.contato {
+    margin-top: 200px;
+    margin-bottom: 50px;
+}
+
+.contato-container {
+    margin-top: 40px;
+    padding: 25px 20px;
+    width: 750px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 100px 90px 90px 90px ;
+
+}
+
+.contato-container h3 {
+    color: white;
+    font-size: 2.7em;
+}
+
+.contato-container p {
+    text-align: start;
+    
+}
+
+.info {
+    background-color: #21172bd8;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 10px;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 25px 25px;
+
+    path {
+    color: #8c11d3;
+    }
+}
+
+.info svg {
+    width: 20px;
+    height: 20px;
+
+}
+
+.icone-contato {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(124, 75, 173, 0.219);
+    border-radius: 10px;
+}
+
+.seq {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: start;
+    justify-self: start;
+    margin-left: 12px;
+    color: rgba(255, 255, 255, 0.63);
+    font-family: monospace;
+    font-size: 1.1em;
+}
+
+.prin {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: start;
+    margin-left: 12px;
+}
+
+.fa-up-right-from-square {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+}
+
+.btn-baixar-curriculo {
+    border: none;
+
+    background-color: #b875ee;
+    color: rgba(11, 5, 17, 0.849);
+    font-weight: bolder;
+    border-radius: 10px;
+    padding: 10px;
+    height: 65px;
+    margin: 0 10px;
+
+    font-size: 1.2em;
+    box-shadow: 0 0 10px #a95de74b;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    path {
+     color: rgba(11, 5, 17, 0.849);
+     transition: all 0.3s;
+    }
+
+}
+
+.btn-baixar-curriculo:hover {
+
+    background-color: #af1be9;
+    box-shadow: 0px 0px 12px #8c11d379;
+    transform: translatey(-2px);
+    color: white;
+
+    path {
+    color: white;
+}
 }
