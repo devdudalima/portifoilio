@@ -343,6 +343,10 @@ h3 {
     padding: 250px 0px 100px;
 }
 
+#sub-tra{
+    width: 180px;
+}
+
 .title {
     font-size: 4rem;
     font-weight: bolder;
@@ -516,6 +520,10 @@ h3 {
     align-items: center;
     flex-direction: column;
     gap: 70px;
+}
+
+#sub-port{
+    width: 120px;
 }
 
 .card.projeto{
