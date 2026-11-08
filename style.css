@@ -52,6 +52,30 @@ body {
     color: white;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+#formacao {
+    scroll-margin-top: -100px;
+}
+
+#skills {
+    scroll-margin-top: 170px;
+}
+
+#projetos {
+    scroll-margin-top: 500px;
+}
+
+#sobre {
+    scroll-margin-top: 80px;
+}
+
+#contato {
+    scroll-margin-top: 60px;
+}
+
 header {
     position: fixed;
     top: 20px;
@@ -129,6 +153,8 @@ nav a:hover::after {
     border: 1px solid #9c11d317;
     padding: 9px 15px;
     border-radius: 50px;
+
+    text-align: center;
     
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -284,12 +310,13 @@ h3 {
     background-color: #8c11d3;
     border: 1px solid #8c11d3;
     padding: 18px 32px;
-    width: 200px;
+    width: 150px;
     box-shadow: 0px 0px 12px #4325557a;
+    text-decoration: none;
 
     p {
         color: rgb(245, 245, 245);
-        font-size: 1.2em;
+        font-size: 1em;
     }
     
     path {
@@ -807,17 +834,21 @@ h3 {
 
 .btn-repositorio{
     text-align: center;
+    text-decoration: none;
+    color: white;
+
     margin: auto;
     margin-top: 150px;
-    color: white;
+    
     font-size: 1.1rem;
     font-weight: 500;
     background-color: #8b8a8b1a;
     border: 1px solid #8b8a8b2a;
     box-shadow: 0px 0px 10px #ffffff10;
+
     padding: 15px 27px;
     border-radius: 30px;
-    width: auto;
+    width: 250px;
 
     display: flex;
     justify-content: center;
