@@ -143,6 +143,10 @@ nav a:hover::after {
     color: white;
 }
 
+#dev {
+    color: #af1be9;
+}
+
 #barra {
     color: rgba(255, 255, 255, 0.418);
     font-weight: 100;
