@@ -3,7 +3,6 @@
 
 body {
     margin: 0px;
-    background-color: #0a0211;
     color: white;
 }
 
@@ -12,14 +11,14 @@ body {
 
     background-image:
         /* Grade quadriculada */
-        linear-gradient(to right, #2c06421a 1px, transparent 1px),
-        linear-gradient(to bottom, #2c06421a 1px, transparent 1px),
+        linear-gradient(to right, #35084d1a 1px, transparent 1px),
+        linear-gradient(to bottom, #35084d1a 1px, transparent 1px),
 
         /* Estrelas pequenas */
-        radial-gradient(1px 1px at 20% 30%, #ffffff3b 99%, transparent),
-        radial-gradient(1px 1px at 90% 60%, #ffffff31 99%, transparent),
-        radial-gradient(1px 1px at 10% 90%, #ffffff2f 99%, transparent),
-        radial-gradient(2px 2px at 55% 50%, #b76aff21 99%, transparent);
+        radial-gradient(1px 1px at 20% 30%, #ffffff1c 99%, transparent),
+        radial-gradient(1px 1px at 90% 60%, #ffffff25 99%, transparent),
+        radial-gradient(1px 1px at 10% 90%, #ffffff1c 99%, transparent),
+        radial-gradient(2px 2px at 55% 50%, #b76aff15 99%, transparent);
 
     background-size:
         64px 64px,
